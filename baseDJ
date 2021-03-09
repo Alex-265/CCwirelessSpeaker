@@ -1,0 +1,282 @@
+m = peripheral.wrap("top")
+rednet.open("back")
+
+
+
+--Slow write on monitor
+local function sw(text, mon, speed)
+	for x=1, string.len(text) do
+	char = string.sub(text,x,x)
+	mon.write(char)
+	sleep(speed)
+	end
+end
+
+--Functions to play music and display on monitor
+local function playCat()
+	rednet.broadcast("cat")
+	m.setCursorPos(21,4)
+	m.clearLine()
+	m.setTextColor(colors.lime)
+	m.write("CAT")
+	sleep(185)
+	m.clearLine()
+	m.setTextColor(colors.white)
+	m.setCursorPos(21,4)	
+	m.write("CAT")
+end
+
+local function playBlocks()
+	rednet.broadcast("blocks")
+	m.setCursorPos(21,5)
+	m.clearLine()
+	m.setTextColor(colors.lime)
+	m.write("BLOCKS")
+	sleep(345)
+	m.clearLine()
+	m.setTextColor(colors.white)
+	m.setCursorPos(21,5)	
+	m.write("BLOCKS")
+end
+
+local function playChirp()
+	rednet.broadcast("chirp")
+	m.setCursorPos(21,6)
+	m.clearLine()
+	m.setTextColor(colors.lime)
+	m.write("CHIRP")
+	sleep(185)
+	m.clearLine()
+	m.setTextColor(colors.white)
+	m.setCursorPos(21,6)	
+	m.write("CHIRP")
+end
+
+local function playFar()
+	rednet.broadcast("far")
+	m.setCursorPos(21,7)
+	m.clearLine()
+	m.setTextColor(colors.lime)
+	m.write("FAR")
+	sleep(174)
+	m.clearLine()
+	m.setTextColor(colors.white)
+	m.setCursorPos(21,7)	
+	m.write("FAR")
+end
+
+local function playMall()
+	rednet.broadcast("mall")
+	m.setCursorPos(21,8)
+	m.clearLine()
+	m.setTextColor(colors.lime)
+	m.write("MALL")
+	sleep(197)
+	m.clearLine()
+	m.setTextColor(colors.white)
+	m.setCursorPos(21,8)	
+	m.write("MALL")
+end
+
+local function playMellohi()
+	rednet.broadcast("mellohi")
+	m.setCursorPos(21,9)
+	m.clearLine()
+	m.setTextColor(colors.lime)
+	m.write("MELLOHI")
+	sleep(96)
+	m.clearLine()
+	m.setTextColor(colors.white)
+	m.setCursorPos(21,9)	
+	m.write("MELLOHI")
+end
+
+local function playStal()
+	rednet.broadcast("stal")
+	m.setCursorPos(21,10)
+	m.clearLine()
+	m.setTextColor(colors.lime)
+	m.write("STAL")
+	sleep(150)
+	m.clearLine()
+	m.setTextColor(colors.white)
+	m.setCursorPos(21,10)	
+	m.write("STAL")
+end
+
+local function playStrad()
+	rednet.broadcast("strad")
+	m.setCursorPos(21,11)
+	m.clearLine()
+	m.setTextColor(colors.lime)
+	m.write("STRAD")
+	sleep(188)
+	m.clearLine()
+	m.setTextColor(colors.white)
+	m.setCursorPos(21,11)	
+	m.write("STRAD")
+end
+
+local function playWard()
+	rednet.broadcast("ward")
+	m.setCursorPos(21,12)
+	m.clearLine()
+	m.setTextColor(colors.lime)
+	m.write("WARD")
+	sleep(250)
+	m.clearLine()
+	m.setTextColor(colors.white)
+	m.setCursorPos(21,12)	
+	m.write("WARD")
+end
+
+local function playWait()
+	rednet.broadcast("wait")
+	m.setCursorPos(21,13)
+	m.clearLine()
+	m.setTextColor(colors.lime)
+	m.write("WAIT")
+	sleep(235)
+	m.clearLine()
+	m.setTextColor(colors.white)
+	m.setCursorPos(21,13)	
+	m.write("WAIT")
+end
+
+local function playPigstep()
+	rednet.broadcast("pigstep")
+	m.setCursorPos(21,14)
+	m.clearLine()
+	m.setTextColor(colors.lime)
+	m.write("PIGSTEP")
+	sleep(148)
+	m.clearLine()
+	m.setTextColor(colors.white)
+	m.setCursorPos(21,14)	
+	m.write("PIGSTEP")
+end
+
+
+--Real loading screen btw
+local function LoadingScreen()
+	m.setTextScale(2.5)
+	m.setCursorPos(6,2)
+	m.setTextColor(colors.red)
+	m.write("BENÏSWORKS JUKEBOX")
+	m.setTextColor(colors.orange)
+	m.setCursorPos(8,3)
+	m.write("--------------")
+	m.setCursorPos(8,6)
+	m.write("--------------")
+	m.setCursorPos(11,4)
+	m.write("LOADING:")
+	m.setTextColor(colors.cyan)
+	m.setCursorPos(5,5)
+	sw("CONNECTING TO CLOUD",m,0.1)
+	m.clearLine()
+	m.setCursorPos(4,5)
+	sw("RETREIVING MUSIC DISKS",m,0.1)
+	m.clearLine()
+	m.setCursorPos(5,5)
+	sw("DISPLAYING BENÏS UI",m,0.1)
+	m.clear()
+end
+
+local function BenisUI()
+	m.setTextScale(1.5)
+	m.setCursorPos(1,1)
+	m.setTextColor(colors.orange)
+	m.write("-------------------------------------------------")
+	m.setCursorPos(1,17)
+	m.write("-------------------------------------------------")
+	m.setTextColor(colors.white)
+	m.setCursorPos(21,4)
+	m.write("CAT")
+	m.setCursorPos(21,5)
+	m.write("BLOCKS")
+	m.setCursorPos(21,6)
+	m.write("CHIRP")
+	m.setCursorPos(21,7)
+	m.write("FAR")
+	m.setCursorPos(21,8)
+	m.write("MALL")
+	m.setCursorPos(21,9)
+	m.write("MELLOHI")
+	m.setCursorPos(21,10)
+	m.write("STAL")
+	m.setCursorPos(21,11)
+	m.write("STRAD")
+	m.setCursorPos(21,12)
+	m.write("WARD")
+	m.setCursorPos(21,13)
+	m.write("WAIT")
+	m.setCursorPos(21,14)
+	m.write("PIGSTEP")
+end
+
+--loadscreenhere--
+LoadingScreen()
+BenisUI()
+
+while true do
+	
+	local event, character = os.pullEvent("char")
+	
+	if character == "k" then
+		playCat()
+	end
+
+	if character == "b" then
+		playBlocks()
+	end
+	
+	if character == "c" then
+		playBlocks()
+	end
+	
+	if character == "f" then
+		playFar()
+	end
+	
+	if character == "m" then
+		playMall()
+	end
+	
+	if character == "n" then
+		playMellohi()
+	end
+	
+	if character == "s" then
+		playStal()
+	end
+	
+	if character == "z" then
+		playStrad()
+	end
+	
+	if character == "w" then
+		playWard()
+	end
+	
+	if character == "u" then
+		playWait()
+	end
+	
+	if character == "p" then
+		playPigstep()
+	end
+	
+	if character == "a" then
+		playCat()
+		playBlocks()
+		playChirp()
+		playFar()
+		playMall()
+		playMellohi()
+		playStal()
+		playStrad()
+		playWard()
+		playWait()
+		playPigstep()
+	end
+end
