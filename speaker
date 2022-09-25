@@ -1,5 +1,6 @@
 local s = peripheral.find("speaker")
 rednet.open("left")
+term.clear()
 print("basst")
  
 while true do
