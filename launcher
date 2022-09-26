@@ -1,0 +1,45 @@
+rednetside = "left" --Where is the wireless modem?, defaults to left
+rednet.open(rednetside)
+ 
+local function printText()
+  sleep(1)
+  print("Succesfully connected to Github")
+  sleep(1)
+  print("Starting downloaded programm")
+  sleep(1)
+  print("Started successfully")
+  sleep(1)
+  print("Clearing Console")
+end
+ 
+local function speaker()
+  shell.run("wget run https://raw.githubusercontent.com/alexander-neumeier/CCwirelessSpeaker/main/speaker")
+end 
+ 
+local function base()
+  error("not ready yet,you can see the progress on github.com/alexander-neumeier/CCwirelessSpeaker/main/baseDJ")
+--  shell.run("wget run https://raw.githubusercontent.com/alexander-neumeier/CCwirelessSpeaker/main/baseDJ")
+end 
+ 
+term.clear()
+write("Press Q for speaker, and e for broadcaster")  
+ 
+while true do 
+  local event, character = os.pullEvent("char")
+ 
+  if character == "q" then
+    printText() 
+    sleep(1)
+    speaker()
+    sleep(1)
+    error()
+  end
+ 
+  if character == "e" then
+    printText()
+    sleep(1) 
+    base()
+    sleep(1)
+    error()
+  end 
+end 
