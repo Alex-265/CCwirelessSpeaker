@@ -2,12 +2,8 @@ local id = "YVtykbNN" --pastebin Id
  
 term.clear()
 write("Loading...")
-sleep(1)
 shell.run("delete launcher")
-sleep(1)
 shell.run("pastebin get YVtykbNN launcher")
-sleep(1)
 term.clear()
 shell.run("launcher")
-sleep(1)
 error()
