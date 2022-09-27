@@ -1,0 +1,20 @@
+--updater
+shell.run("delete updater")
+shell.run("wget https://raw.githubusercontent.com/alexander-neumeier/CCwirelessSpeaker/main/mainupdater updater")
+write("Updated updater")
+--updater end
+sleep(0.3)
+--project beginning
+local basalt = require("basalt")
+
+local mainframe = basalt.createFrame("mainFrame"):show()
+local basespeakerbutton = mainFrame
+:addButton("speakerbutton")
+:setPosition(4,4)
+:setText("Speaker Control")
+:onClick(
+  function()
+    shell.run(speakercontrol)
+  end)
+
+basalt.autoUpdate()
