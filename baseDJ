@@ -23,7 +23,7 @@ end
 local function complete()
 	term.clear()
 	term.setCursorPos(20,9.5)
-	write(Sending Information to speakers)
+	write("Sending Information to speakers")
 	sleep(1)
 	printtitle()
 end
