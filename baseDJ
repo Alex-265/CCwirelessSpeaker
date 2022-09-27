@@ -2,7 +2,6 @@ rednet.open("left")
 state = 1
 
 local function printtitle()
-	term.setTextScale(1.5)
 	term.setCursorPos(1,2)
 	term.setTextColor(colors.orange)
 	term.write("E Erste Million")
