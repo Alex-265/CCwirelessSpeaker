@@ -1,17 +1,11 @@
 local filePath = "basalt.lua"
 local id = "YVtykbNN" --pastebin Id
 
-term.clear()
-write("Installing Basalt Api")
---Basalt
-if not(fs.exists(filePath))then
-    shell.run("pastebin run ESs1mg7P packed true "..filePath:gsub(".lua", ""))
-end
-
 
 term.clear()
 write("Loading...")
 shell.run("delete launcher")
 shell.run("pastebin get YVtykbNN launcher")
 term.clear()
+shell.run("launcher")
 error()
