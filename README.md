@@ -3,8 +3,7 @@ A Wireless Speaker system for CC:Tweaked.
 
 How to use
 
-Enter "pastebin get NWhUgi4g <name>"
-Then enter <name> in your Terminal and follow the steps.
+Enter "pastebin get NWhUgi4g" in your Terminal and run the file
 
 License
   
