@@ -9,7 +9,7 @@ local basalt = require("basalt")
 
 local mainframe = basalt.createFrame("mainFrame"):show()
 local basespeakerbutton = mainFrame
-:addButton("speakerbutton")
+:addButton("clickableButton")
 :setPosition(4,4)
 :setText("Speaker Control")
 :onClick(
