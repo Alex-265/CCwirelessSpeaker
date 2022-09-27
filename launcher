@@ -2,13 +2,9 @@ rednetside = "left" --Where is the wireless modem?, defaults to left
 rednet.open(rednetside)
  
 local function printText()
-  sleep(1)
   print("Succesfully connected to Github")
-  sleep(1)
   print("Starting downloaded programm")
-  sleep(1)
   print("Started successfully")
-  sleep(1)
   print("Clearing Console")
 end
  
