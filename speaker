@@ -10,7 +10,7 @@ while true do
     print("")
     s.stop()
   else
-    s.playSound(message, 2)
+    s.playSound(message, 0.5)
     print("Recieved Message, Playing music")
     print(message)
   end
