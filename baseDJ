@@ -4,7 +4,7 @@ state = 1
 local function printtitle()
 	term.clear()
 	sleep(0.2)
-	term.setCursorPos(1,2)
+	term.setCursorPos(1,1)
 	term.setTextColor(colors.orange)
 	term.write("E Erste Million")
 	term.setCursorPos(1,2)
