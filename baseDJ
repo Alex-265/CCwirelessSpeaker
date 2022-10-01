@@ -18,6 +18,8 @@ local function printtitle()
 	term.setCursorPos(1,6)
 	term.write("P Heat Waves")
 	term.setCursorPos(1,7)
+	term.setCursorPos(1,8)
+	term.write("L Beichte B-low")
 	write("More comming soon!")
 	term.setCursorPos(1,19)
 	term.setTextColor(colors.red)
@@ -66,5 +68,9 @@ while true do
 	if character == "s" then
 		complete()
 		rednet.broadcast("stop")
+	end
+	if character == "l" then
+		complete()
+		rednet.broadcast("music_disc.far")
 	end
 end
