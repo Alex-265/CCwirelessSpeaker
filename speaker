@@ -2,16 +2,16 @@ local s = peripheral.find("speaker")
 rednet.open("left")
 term.clear()
 print("Started listening to rednet")
- 
+
 while true do
   local sender, message, protocol = rednet.receive()
- 
+
   if message == "stop" then
     print("")
     s.stop()
   else
-    s.playSound(message)
+    s.playSound(message, 2)
     print("Recieved Message, Playing music")
     print(message)
-  end 
+  end
 end
