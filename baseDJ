@@ -49,7 +49,7 @@ while true do
 	end
 	if character == "t" then
 		complete()
-		rednet.broadcast("music_disc.otherside")
+		rednet.broadcast("music_disc.strad")
 	end
 	if character == "i" then
 		complete()
