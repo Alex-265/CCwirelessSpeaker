@@ -59,4 +59,8 @@ while true do
 		complete()
 		rednet.broadcast("music_disc.blocks")
 	end
+	if character == "s" then
+		complete()
+		rednet.broadcast("stop")
 	end
+end
