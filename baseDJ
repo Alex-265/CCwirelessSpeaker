@@ -53,7 +53,7 @@ while true do
 	end
 	if character == "i" then
 		complete()
-		rednet.broadcast("music_disc.ward")
+		rednet.broadcast("music_disc.wait")
 	end
 	if character == "o" then
 		complete()
